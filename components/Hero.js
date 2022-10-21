@@ -1,5 +1,6 @@
 import { Container, Box, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
+import { useSpring, animated } from 'react-spring'
 
 const HeroLayout = styled('div')(({ theme }) => ({
   color: theme.palette.common.white,
@@ -29,7 +30,19 @@ const ScrollingBg = styled('div')({
   width: 2048,
 })
 
+const FloatingKitty = styled('div')({
+  background: 'url(/images/kitty1.png)',
+  width: '5%',
+  zIndex: '98',
+})
+
 const Hero = () => {
+  const kitty1 = useSpring({
+    loop: { reverse: true },
+    config: { duration: 10000 },
+    from: { rotateZ: 0, x: 0 },
+    to: { rotateZ: 180, x: 1000, y: 100 },
+  })
   return (
     <HeroLayout>
       <Box
@@ -42,6 +55,7 @@ const Hero = () => {
           display: 'flex',
           flexDirection: 'column',
           zIndex: '99',
+          border: '5px solid black',
         }}
       >
         <Typography variant="h1" component="h1" align="center">
@@ -52,11 +66,30 @@ const Hero = () => {
         </Typography>
       </Box>
 
+      <Box
+        sx={{
+          position: 'absolute',
+          height: '100%',
+          width: '100%',
+
+          // alignItems: 'center',
+          // justifyContent: 'center',
+          // display: 'flex',
+          // flexDirection: 'column',
+          zIndex: '98',
+        }}
+      >
+        <animated.img src="/images/kitty1.png" style={kitty1} width="5%" />
+
+        {/* <FloatingKitty /> */}
+      </Box>
+
       <Container
         sx={{
           overflow: 'hidden',
           height: '100vh',
           position: 'relative',
+          border: '5px solid red',
         }}
       >
         <ScrollingBg
