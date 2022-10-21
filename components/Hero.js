@@ -65,6 +65,12 @@ const Hero = () => {
     from: { rotateZ: 0, x: 10, y: 0 },
     to: { rotateZ: 360, y: 800 },
   })
+  const kitty3 = useSpring({
+    loop: { reverse: true },
+    config: { duration: 10000 },
+    from: { rotateZ: 0, x: 1000, y: 1000 },
+    to: { rotateZ: 360, x: 0, y: 0 },
+  })
 
   return (
     <HeroLayout>
@@ -134,6 +140,9 @@ const Hero = () => {
         </Box>
         <Box sx={{ position: 'absolute', width: '100vh' }}>
           <animated.img src="/images/kitty1.png" style={kitty2} width="5%" />
+        </Box>
+        <Box sx={{ position: 'absolute', width: '100vh' }}>
+          <animated.img src="/images/kitty1.png" style={kitty3} width="5%" />
         </Box>
         {/* <FloatingKitty /> */}
       </Box>
