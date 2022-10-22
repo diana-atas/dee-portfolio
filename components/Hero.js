@@ -1,20 +1,36 @@
-import { Container, Box, Typography } from '@mui/material'
+import { Container, Box, Typography, cardClasses } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import { useSpring, animated } from 'react-spring'
 
 const HeroLayout = styled('div')(({ theme }) => ({
   color: theme.palette.common.white,
-  // position: 'relative',
-  // display: 'flex',
+  // border: '5px solid blue',
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
   // alignItems: 'center',
   // height: '100%',
-  // width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    height: '80vh',
-    minHeight: 500,
-    maxHeight: 1300,
-  },
+  width: '100%',
+
+  // [theme.breakpoints.up('sm')]: {
+  //   height: '80vh',
+  //   minHeight: 500,
+  //   maxHeight: 1300,
+  // },
 }))
+
+const bgWidth = 2048
+const bgHeight = 4096
+// let w = () => {
+//   if (typeof window !== 'undefined') {
+//     return window.innerWidth
+//   }
+// }
+// let h = () => {
+//   if (typeof window !== 'undefined') {
+//     return window.innerHeight
+//   }
+// }
 
 const ScrollingBg = styled('div')({
   '@keyframes slide': {
@@ -26,8 +42,8 @@ const ScrollingBg = styled('div')({
     },
   },
   position: 'absolute',
-  height: 8192,
-  width: 2048,
+  height: bgHeight * 2,
+  width: bgWidth,
 })
 
 const FloatingKitty = styled('div')({
@@ -43,19 +59,27 @@ const Hero = () => {
     from: { rotateZ: 0, x: 0 },
     to: { rotateZ: 180, x: 1000, y: 100 },
   })
+  const kitty2 = useSpring({
+    loop: { reverse: true },
+    config: { duration: 10000 },
+    from: { rotateZ: 0, x: 10, y: 0 },
+    to: { rotateZ: 360, y: 800 },
+  })
+
   return (
     <HeroLayout>
+      {/* <Container sx={{ position: 'relative', border: '5px solid green' }}> */}
       <Box
         sx={{
           position: 'absolute',
-          height: '100%',
-          width: '100%',
+          height: '100vh',
+          width: '100vh',
           alignItems: 'center',
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
           zIndex: '99',
-          border: '5px solid black',
+          // border: '5px solid black',
         }}
       >
         <Typography variant="h1" component="h1" align="center">
@@ -65,31 +89,16 @@ const Hero = () => {
           Full Stack Developer
         </Typography>
       </Box>
+      {/* </Container> */}
 
       <Box
         sx={{
-          position: 'absolute',
-          height: '100%',
-          width: '100%',
-
-          // alignItems: 'center',
-          // justifyContent: 'center',
-          // display: 'flex',
-          // flexDirection: 'column',
-          zIndex: '98',
-        }}
-      >
-        <animated.img src="/images/kitty1.png" style={kitty1} width="5%" />
-
-        {/* <FloatingKitty /> */}
-      </Box>
-
-      <Container
-        sx={{
-          overflow: 'hidden',
+          // overflow: 'hidden',
+          overflow: 'clip',
           height: '100vh',
-          position: 'relative',
-          border: '5px solid red',
+          width: '100vh',
+          position: 'absolute',
+          // border: '5px solid red',
         }}
       >
         <ScrollingBg
@@ -120,7 +129,14 @@ const Hero = () => {
             zIndex: '3',
           }}
         />
-      </Container>
+        <Box sx={{ position: 'absolute', width: '100vh' }}>
+          <animated.img src="/images/kitty1.png" style={kitty1} width="5%" />
+        </Box>
+        <Box sx={{ position: 'absolute', width: '100vh' }}>
+          <animated.img src="/images/kitty1.png" style={kitty2} width="5%" />
+        </Box>
+        {/* <FloatingKitty /> */}
+      </Box>
     </HeroLayout>
   )
 }
