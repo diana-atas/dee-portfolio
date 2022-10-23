@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Button, Stack } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import { useSpring, animated } from 'react-spring'
 
@@ -79,11 +79,30 @@ const Hero = () => {
         <Typography variant="h1" component="h1" align="center">
           Dee Atas
         </Typography>
-        <Typography variant="h2" component="h2" align="center">
+        <Typography variant="h2" component="h2" align="center" mb={3}>
           Full Stack Developer
         </Typography>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+          <Button variant="outlined">About</Button>
+          <Button variant="outlined">Experience</Button>
+          <Button variant="outlined">Qualification</Button>
+        </Stack>
       </Box>
 
+      {/* <Box
+        sx={{
+          position: 'absolute',
+          height: '100vh',
+          width: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          display: 'flex',
+          // flexDirection: 'column',
+          zIndex: '99',
+          // border: '5px solid black',
+        }}
+      >
+      </Box> */}
       <Box
         sx={{
           overflow: 'hidden',
