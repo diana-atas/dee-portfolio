@@ -1,15 +1,14 @@
-import { Container, Box, Typography, cardClasses } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import { useSpring, animated } from 'react-spring'
 
 const HeroLayout = styled('div')(({ theme }) => ({
   color: theme.palette.common.white,
-  // border: '5px solid blue',
   position: 'relative',
-  display: 'flex',
-  justifyContent: 'center',
+  // display: 'flex',
+  // justifyContent: 'center',
   // alignItems: 'center',
-  // height: '100%',
+  height: '100%',
   width: '100%',
 
   // [theme.breakpoints.up('sm')]: {
@@ -21,16 +20,6 @@ const HeroLayout = styled('div')(({ theme }) => ({
 
 const bgWidth = 2048
 const bgHeight = 4096
-// let w = () => {
-//   if (typeof window !== 'undefined') {
-//     return window.innerWidth
-//   }
-// }
-// let h = () => {
-//   if (typeof window !== 'undefined') {
-//     return window.innerHeight
-//   }
-// }
 
 const ScrollingBg = styled('div')({
   '@keyframes slide': {
@@ -46,11 +35,11 @@ const ScrollingBg = styled('div')({
   width: bgWidth,
 })
 
-const FloatingKitty = styled('div')({
-  background: 'url(/images/kitty1.png)',
-  width: '5%',
-  zIndex: '98',
-})
+// const FloatingKitty = styled('div')({
+//   background: 'url(/images/kitty1.png)',
+//   width: '5%',
+//   zIndex: '98',
+// })
 
 const Hero = () => {
   const kitty1 = useSpring({
@@ -74,12 +63,11 @@ const Hero = () => {
 
   return (
     <HeroLayout>
-      {/* <Container sx={{ position: 'relative', border: '5px solid green' }}> */}
       <Box
         sx={{
           position: 'absolute',
           height: '100vh',
-          width: '100vh',
+          width: '100%',
           alignItems: 'center',
           justifyContent: 'center',
           display: 'flex',
@@ -95,14 +83,12 @@ const Hero = () => {
           Full Stack Developer
         </Typography>
       </Box>
-      {/* </Container> */}
 
       <Box
         sx={{
-          // overflow: 'hidden',
-          overflow: 'clip',
+          overflow: 'hidden',
           height: '100vh',
-          width: '100vh',
+          width: '100%',
           position: 'absolute',
           // border: '5px solid red',
         }}
