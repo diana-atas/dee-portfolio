@@ -6,7 +6,10 @@ import {
   ThemeProvider,
 } from '@mui/material/styles'
 
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+
 import Hero from '../components/Hero'
+import About from '../components/About'
 
 let theme = createTheme()
 theme = responsiveFontSizes(theme)
@@ -20,6 +23,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <About />
+      {/* <BrowserRouter> */}
+      {/* <Routes> */}
+      {/* <Route path="/" element={<Hero />} /> */}
+      {/* <Route path="about" element={<About />} /> */}
+      {/* </Routes> */}
+      {/* </BrowserRouter> */}
     </ThemeProvider>
   )
 }
