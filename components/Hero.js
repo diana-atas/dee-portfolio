@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Stack } from '@mui/material'
+import { Box, Typography, Button, Stack, Link } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import { useSpring, animated } from 'react-spring'
 
@@ -83,9 +83,12 @@ const Hero = () => {
           Full Stack Developer
         </Typography>
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+
           <Button href="/portfolio" variant="outlined">
             About
           </Button>
+
+
           <Button variant="outlined">Experience</Button>
           <Button variant="outlined">Qualification</Button>
         </Stack>
