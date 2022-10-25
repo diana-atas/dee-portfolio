@@ -1,6 +1,11 @@
 import Portfolio from '../components/Portfolio'
 
-import { styled } from '@mui/material/styles'
+import {
+  createTheme,
+  responsiveFontSizes,
+  styled,
+  ThemeProvider,
+} from '@mui/material/styles'
 
 const PortfolioLayout = styled('div')(({ theme }) => ({
   // color: theme.palette.common.white,
@@ -14,10 +19,15 @@ const PortfolioLayout = styled('div')(({ theme }) => ({
   },
 }))
 
+let theme = createTheme()
+theme = responsiveFontSizes(theme)
+
 export default function PortfolioPage() {
   return (
-    <PortfolioLayout>
-      <Portfolio />
-    </PortfolioLayout>
+    <ThemeProvider>
+      <PortfolioLayout>
+        <Portfolio />
+      </PortfolioLayout>
+    </ThemeProvider>
   )
 }
