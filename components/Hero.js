@@ -82,14 +82,6 @@ const Hero = () => {
         <Typography variant="h2" component="h2" align="center" mb={3}>
           Full Stack Developer
         </Typography>
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-          <Button href="/portfolio" variant="outlined">
-            About
-          </Button>
-
-          <Button variant="outlined">Experience</Button>
-          <Button variant="outlined">Qualification</Button>
-        </Stack>
       </Box>
 
       {/* <Box
