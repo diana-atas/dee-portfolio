@@ -24,3 +24,14 @@ export default function PortfolioPage() {
     </ThemeProvider>
   )
 }
+
+export async function getServerSideProps(context) {
+  await waitload(2)
+  return {
+    props: { dummy: 'dummy' },
+  }
+}
+
+function waitload(sec) {
+  return new Promise((resolve) => setTimeout(resolve, sec * 1000))
+}
