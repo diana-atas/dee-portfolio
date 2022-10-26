@@ -72,7 +72,7 @@ const Hero = () => {
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
-          zIndex: '99',
+          zIndex: '98',
           // border: '5px solid black',
         }}
       >
@@ -83,11 +83,9 @@ const Hero = () => {
           Full Stack Developer
         </Typography>
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-
           <Button href="/portfolio" variant="outlined">
             About
           </Button>
-
 
           <Button variant="outlined">Experience</Button>
           <Button variant="outlined">Qualification</Button>
@@ -103,7 +101,7 @@ const Hero = () => {
           justifyContent: 'center',
           display: 'flex',
           // flexDirection: 'column',
-          zIndex: '99',
+          zIndex: '98',
           // border: '5px solid black',
         }}
       >
