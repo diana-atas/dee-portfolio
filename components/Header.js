@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 
 const NavStyles = styled('div')(({ theme }) => ({
   color: theme.palette.common.white,
+  // position: 'relative',
 }))
 
 const Header = () => {
@@ -34,7 +35,6 @@ const Header = () => {
       <Box
         sx={{
           position: 'absolute',
-          height: '100vh',
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
