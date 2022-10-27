@@ -1,6 +1,7 @@
 import About from './About'
 import { useSpring, animated } from 'react-spring'
 import { styled, ThemeProvider } from '@mui/material/styles'
+import Experience from './Experience'
 
 const PortfolioLayout = styled('div')(({ theme }) => ({
   // color: theme.palette.common.white,
@@ -18,6 +19,7 @@ const Portfolio = () => {
   return (
     <PortfolioLayout>
       <About />
+      <Experience />
     </PortfolioLayout>
   )
 }
