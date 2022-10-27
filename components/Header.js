@@ -5,8 +5,13 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 const NavStyles = styled('div')(({ theme }) => ({
-  color: theme.palette.common.white,
-  // position: 'relative',
+  // color: theme.palette.common.white,
+  position: 'relative',
+  display: 'flex',
+  width: '100%',
+  justifyContent: 'center',
+  textAlign: 'center',
+  zIndex: '99',
 }))
 
 const Header = () => {
@@ -32,27 +37,12 @@ const Header = () => {
 
   return (
     <NavStyles>
-      <Box
-        sx={{
-          position: 'absolute',
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          zIndex: '99',
-          mt: 3,
-        }}
-      >
-        <Stack
-          direction={{ xs: 'column', sm: 'row' }}
-          spacing={3}
-          align="center"
-        >
-          <Link href="/">Home</Link>
-          <Link href="portfolio">About</Link>
-          <Link href="#">Experience</Link>
-          <Link href="#">Qualification</Link>
-        </Stack>
-      </Box>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3}>
+        <Link href="/">Home</Link>
+        <Link href="portfolio">About</Link>
+        <Link href="#">Experience</Link>
+        <Link href="#">Qualification</Link>
+      </Stack>
     </NavStyles>
   )
 }
