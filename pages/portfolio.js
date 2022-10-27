@@ -1,6 +1,5 @@
 import Portfolio from '../components/Portfolio'
 
-import MyTheme from '../components/MyTheme'
 import { styled, ThemeProvider } from '@mui/material/styles'
 
 const PortfolioLayout = styled('div')(({ theme }) => ({
@@ -17,11 +16,9 @@ const PortfolioLayout = styled('div')(({ theme }) => ({
 
 export default function PortfolioPage() {
   return (
-    <ThemeProvider theme={MyTheme}>
-      <PortfolioLayout>
-        <Portfolio />
-      </PortfolioLayout>
-    </ThemeProvider>
+    <PortfolioLayout>
+      <Portfolio />
+    </PortfolioLayout>
   )
 }
 
