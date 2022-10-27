@@ -4,8 +4,10 @@ const About = () => {
   return (
     <Container>
       <Box>
-        <Typography component="h2" variant="h2"></Typography>
-        About
+        <Typography component="h2" variant="h2">
+          About
+        </Typography>
+
         <Typography variant="body1" align="justify">
           After a decade of data processing and number crunching in the employee
           insurance industry using Excel, I sought to expand my problem-solving
