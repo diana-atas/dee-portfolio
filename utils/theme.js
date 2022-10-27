@@ -1,11 +1,14 @@
 // overrides MUI's default theme settings
 
-import { createTheme } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes } from '@mui/material'
 
-export const theme = createTheme({
+export let theme = createTheme({
   palette: {
     primary: {
       main: '#fcba03',
+      mode: 'dark',
     },
   },
 })
+
+theme = responsiveFontSizes(theme)

@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import Layout from '../components/Layout'
 import { ThemeProvider } from '@mui/material'
 import { theme } from '../utils/theme'
 import createEmotionCache from '../utils/createEmotionCache'
@@ -14,7 +15,9 @@ function MyApp({
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </CacheProvider>
   )
