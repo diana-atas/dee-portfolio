@@ -10,6 +10,7 @@ const HeroLayout = styled('div')(({ theme }) => ({
   // alignItems: 'center',
   height: '100%',
   width: '100%',
+  // border: '5px solid green',
 
   // [theme.breakpoints.up('sm')]: {
   //   height: '80vh',
