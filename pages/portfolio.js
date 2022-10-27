@@ -4,7 +4,7 @@ import CatsInSpace from '../components/CatsInSpace'
 export default function PortfolioPage() {
   return (
     <>
-      <CatsInSpace />
+      {/* <CatsInSpace /> */}
       <Portfolio />
     </>
   )
