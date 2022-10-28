@@ -45,6 +45,14 @@ const Portfolio = () => {
           }}
         />
         <ParallaxLayer
+          offset={3}
+          speed={1}
+          style={{
+            backgroundImage: 'url(/images/portfolio-bg/pbg2o2.png)',
+            backgroundSize: 'cover',
+          }}
+        />
+        <ParallaxLayer
           offset={0}
           speed={0}
           factor={3}
@@ -53,6 +61,26 @@ const Portfolio = () => {
             backgroundSize: 'cover',
           }}
         />
+        <ParallaxLayer offset={1.3} speed={-0.3} style={{ opacity: 0.1 }}>
+          <Box
+            component="img"
+            alt=""
+            src="/images/portfolio-bg/pbgorangeplanet.png"
+          />
+        </ParallaxLayer>
+        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.5 }}>
+          <Box
+            component="img"
+            alt=""
+            src="/images/portfolio-bg/pbgmintplanet.png"
+            style={{ display: 'block' }}
+          />
+          <Box
+            component="img"
+            alt=""
+            src="/images/portfolio-bg/pbgtinymintplanets.png"
+          />
+        </ParallaxLayer>
       </Parallax>
       <Header />
       <About />
