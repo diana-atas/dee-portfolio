@@ -9,6 +9,8 @@
     "@emotion/react": "^11.10.4",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.4",
+    "@fontsource/exo": "^4.5.10",
+    "@fontsource/orbitron": "^4.5.10",
     "@fontsource/roboto": "^4.5.8",
     "@mui/material": "^5.10.9",
     "@react-spring/parallax": "^9.5.5",
