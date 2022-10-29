@@ -1,23 +1,6 @@
-import { Box, Typography, Button, Stack, Link } from '@mui/material'
+import { Box } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import { useSpring, animated } from 'react-spring'
-
-const HeroLayout = styled('div')(({ theme }) => ({
-  color: theme.palette.common.white,
-  position: 'relative',
-  // display: 'flex',
-  // justifyContent: 'center',
-  // alignItems: 'center',
-  height: '100%',
-  width: '100%',
-  // border: '5px solid green',
-
-  // [theme.breakpoints.up('sm')]: {
-  //   height: '80vh',
-  //   minHeight: 500,
-  //   maxHeight: 1300,
-  // },
-}))
 
 const bgWidth = 2048
 const bgHeight = 4096
@@ -63,56 +46,54 @@ const CatsInSpace = () => {
   })
 
   return (
-    <HeroLayout>
-      <Box
+    <Box
+      sx={{
+        overflow: 'hidden',
+        height: '100vh',
+        width: '100%',
+        position: 'absolute',
+        // border: '5px solid red',
+      }}
+    >
+      <ScrollingBg
         sx={{
-          overflow: 'hidden',
-          height: '100vh',
-          width: '100%',
-          position: 'absolute',
-          // border: '5px solid red',
+          background: 'url(/images/hero-bg/bg1.png) repeat-y',
+          animation: `slide 100s linear infinite`,
+          zIndex: '-1',
         }}
-      >
-        <ScrollingBg
-          sx={{
-            background: 'url(/images/hero-bg/bg1.png) repeat-y',
-            animation: `slide 100s linear infinite`,
-            zIndex: '-1',
-          }}
-        />
-        <ScrollingBg
-          sx={{
-            background: 'url(/images/hero-bg/bg2.png) repeat-y',
-            animation: `slide 70s linear infinite`,
-            zIndex: '1',
-          }}
-        />
-        <ScrollingBg
-          sx={{
-            background: 'url(/images/hero-bg/bg3.png) repeat-y',
-            animation: `slide 70s linear infinite`,
-            zIndex: '2',
-          }}
-        />
-        <ScrollingBg
-          sx={{
-            background: 'url(/images/hero-bg/bg4.png) repeat-y',
-            animation: `slide 100s linear infinite`,
-            zIndex: '3',
-          }}
-        />
-        <Box sx={{ position: 'absolute', width: '100vh' }}>
-          <animated.img src="/images/kitty1.png" style={kitty1} width="5%" />
-        </Box>
-        <Box sx={{ position: 'absolute', width: '100vh' }}>
-          <animated.img src="/images/kitty1.png" style={kitty2} width="5%" />
-        </Box>
-        <Box sx={{ position: 'absolute', width: '100vh' }}>
-          <animated.img src="/images/kitty1.png" style={kitty3} width="5%" />
-        </Box>
-        {/* <FloatingKitty /> */}
+      />
+      <ScrollingBg
+        sx={{
+          background: 'url(/images/hero-bg/bg2.png) repeat-y',
+          animation: `slide 70s linear infinite`,
+          zIndex: '1',
+        }}
+      />
+      <ScrollingBg
+        sx={{
+          background: 'url(/images/hero-bg/bg3.png) repeat-y',
+          animation: `slide 70s linear infinite`,
+          zIndex: '2',
+        }}
+      />
+      <ScrollingBg
+        sx={{
+          background: 'url(/images/hero-bg/bg4.png) repeat-y',
+          animation: `slide 100s linear infinite`,
+          zIndex: '3',
+        }}
+      />
+      <Box sx={{ position: 'absolute', width: '100vh' }}>
+        <animated.img src="/images/kitty1.png" style={kitty1} width="5%" />
       </Box>
-    </HeroLayout>
+      <Box sx={{ position: 'absolute', width: '100vh' }}>
+        <animated.img src="/images/kitty1.png" style={kitty2} width="5%" />
+      </Box>
+      <Box sx={{ position: 'absolute', width: '100vh' }}>
+        <animated.img src="/images/kitty1.png" style={kitty3} width="5%" />
+      </Box>
+      {/* <FloatingKitty /> */}
+    </Box>
   )
 }
 
