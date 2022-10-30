@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import { useSpring, animated } from 'react-spring'
 
@@ -28,21 +28,33 @@ const ScrollingBg = styled('div')({
 const CatsInSpace = () => {
   const kitty1 = useSpring({
     loop: { reverse: true },
-    config: { duration: 10000 },
-    from: { rotateZ: 0, x: 0 },
-    to: { rotateZ: 180, x: 1000, y: 100 },
+    config: { duration: 25000 },
+    from: { rotateZ: 0, x: -200, y: 200 },
+    to: { rotateZ: 180, x: bgWidth + 100, y: 1000 },
   })
   const kitty2 = useSpring({
-    loop: { reverse: true },
-    config: { duration: 10000 },
-    from: { rotateZ: 0, x: 10, y: 0 },
-    to: { rotateZ: 360, y: 800 },
+    loop: true,
+    config: { duration: 35000 },
+    from: { rotateZ: 0, x: 500, y: 2000 },
+    to: { rotateZ: 80, x: 300, y: -100 },
   })
   const kitty3 = useSpring({
     loop: { reverse: true },
-    config: { duration: 10000 },
-    from: { rotateZ: 0, x: 1000, y: 1000 },
-    to: { rotateZ: 360, x: 0, y: 0 },
+    config: { duration: 20000 },
+    from: { rotateZ: 0, x: 3000, y: 1000 },
+    to: { rotateZ: -4000, x: -100, y: -100 },
+  })
+  const kitty4 = useSpring({
+    loop: { reverse: true },
+    config: { duration: 30000 },
+    from: { rotateZ: 0, x: bgWidth + 100, y: 800 },
+    to: { rotateZ: 180, x: -100, y: 100 },
+  })
+  const kitty5 = useSpring({
+    loop: { reverse: true },
+    config: { duration: 25000 },
+    from: { rotateZ: 0, x: -1000, y: 800 },
+    to: { rotateZ: 360, x: bgWidth + 100, y: 10 },
   })
 
   return (
@@ -51,6 +63,7 @@ const CatsInSpace = () => {
         overflow: 'hidden',
         height: '100vh',
         width: '100%',
+        // maxWidth: '100%',
         position: 'absolute',
         // border: '5px solid red',
       }}
@@ -84,13 +97,24 @@ const CatsInSpace = () => {
         }}
       />
       <Box sx={{ position: 'absolute', width: '100vh' }}>
-        <animated.img src="/images/kitty1.png" style={kitty1} width="5%" />
+        {/* left-facing, floating */}
+        <animated.img src="/images/kitty2.png" style={kitty2} width="5%" />
       </Box>
       <Box sx={{ position: 'absolute', width: '100vh' }}>
-        <animated.img src="/images/kitty1.png" style={kitty2} width="5%" />
+        {/* left-facing */}
+        <animated.img src="/images/kitty4.png" style={kitty4} width="5%" />
       </Box>
       <Box sx={{ position: 'absolute', width: '100vh' }}>
-        <animated.img src="/images/kitty1.png" style={kitty3} width="5%" />
+        {/* front-facing */}
+        <animated.img src="/images/kitty1.png" style={kitty1} width="8%" />
+      </Box>
+      <Box sx={{ position: 'absolute', width: '100vh' }}>
+        {/* right-facing, belly up */}
+        <animated.img src="/images/kitty3.png" style={kitty3} width="8%" />
+      </Box>
+      <Box sx={{ position: 'absolute', width: '100vh' }}>
+        {/* kitty holding star */}
+        <animated.img src="/images/kitty5.png" style={kitty5} width="12%" />
       </Box>
       {/* <FloatingKitty /> */}
     </Box>
