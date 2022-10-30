@@ -12,6 +12,8 @@ const NavStyles = styled('div')(({ theme }) => ({
   justifyContent: 'center',
   textAlign: 'center',
   zIndex: '99',
+  fontFamily: 'Exo',
+  textTransform: 'uppercase',
 }))
 
 const Header = () => {

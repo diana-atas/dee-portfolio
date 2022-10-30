@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
-const FooterStyles = styled('div')(({ theme }) => ({
+const FooterStyles = styled(Box)(({ theme }) => ({
   // color: theme.palette.common.white,
   position: 'relative',
   display: 'flex',
@@ -12,7 +12,7 @@ const FooterStyles = styled('div')(({ theme }) => ({
 const Footer = () => {
   return (
     <FooterStyles>
-      <Typography align="center">
+      <Typography component="body1" variant="body1" align="center">
         This portfolio was built with Next.js, Material UI and react-spring.
       </Typography>
     </FooterStyles>
