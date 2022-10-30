@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles'
 import Header from './Header'
 import Footer from './Footer'
 
-const HeroLayout = styled('div')(({ theme }) => ({
+const HeroLayout = styled(Box)(({ theme }) => ({
   color: theme.palette.common.white,
   position: 'relative',
   display: 'flex',
@@ -13,6 +13,7 @@ const HeroLayout = styled('div')(({ theme }) => ({
   // alignItems: 'center',
   height: '100vh',
   width: '100%',
+
   // border: '5px solid green',
 
   // [theme.breakpoints.up('sm')]: {

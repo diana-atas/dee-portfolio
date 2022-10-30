@@ -63,7 +63,7 @@ const CatsInSpace = () => {
         overflow: 'hidden',
         height: '100vh',
         width: '100%',
-        // maxWidth: '100%',
+        maxWidth: 'xl',
         position: 'absolute',
         // border: '5px solid red',
       }}

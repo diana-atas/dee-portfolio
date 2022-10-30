@@ -25,10 +25,11 @@ const fontSubtitle = {
 
 export const theme = createTheme({
   palette: {
-    primary: {
-      main: '#fcba03',
+    background: {
+      default: '#3b1754',
     },
   },
+
   typography: {
     h1: {
       fontFamily: fontHeader.fontFamily,
