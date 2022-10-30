@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Stack, Link, Grid } from '@mui/material'
+import { Box, Typography, Grid } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
 import Header from './Header'
@@ -8,12 +8,11 @@ const HeroLayout = styled('div')(({ theme }) => ({
   color: theme.palette.common.white,
   position: 'relative',
   display: 'flex',
-  flexDirection: 'column',
+  // flexDirection: 'column',
   // justifyContent: 'center',
   // alignItems: 'center',
   height: '100vh',
   width: '100%',
-
   // border: '5px solid green',
 
   // [theme.breakpoints.up('sm')]: {
@@ -23,11 +22,6 @@ const HeroLayout = styled('div')(({ theme }) => ({
   // },
 }))
 
-// const Item = styled('div')(({ theme }) => ({
-//   padding: theme.spacing(1),
-//   // textAlign: 'center',
-//   color: theme.palette.common.white,
-// }))
 const Hero = () => {
   return (
     <HeroLayout>
@@ -47,13 +41,45 @@ const Hero = () => {
         </Grid>
 
         <Grid item xs={12}>
-          <Box sx={{ minHeight: '100%' }}>
-            <Typography variant="h1" component="h1" align="center">
-              Dee Atas
-            </Typography>
-            <Typography variant="h2" component="h2" align="center" mb={3}>
-              Full Stack Developer
-            </Typography>
+          <Box
+            sx={{
+              minHeight: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              // border: '5px solid green',
+            }}
+          >
+            <Box
+              sx={{
+                width: '60%',
+                height: 200,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '2px solid #fff',
+                position: 'absolute',
+                // mb: -3,
+              }}
+            >
+              <Typography variant="h1" component="h1" align="center">
+                dee atas
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                position: 'absolute',
+                mt: 25,
+                // border: '5px solid blue',
+                color: '#000',
+                backgroundColor: '#fff',
+              }}
+            >
+              <Typography variant="h5" component="h2" align="center">
+                full stack developer
+              </Typography>
+            </Box>
           </Box>
         </Grid>
 
@@ -62,8 +88,7 @@ const Hero = () => {
             sx={{
               minHeight: '100%',
               display: 'flex',
-              // alignItems: 'flex-end',
-
+              alignItems: 'flex-end',
               // border: '5px solid green',
             }}
           >
