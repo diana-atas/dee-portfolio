@@ -8,9 +8,6 @@ const HeroLayout = styled(Box)(({ theme }) => ({
   color: theme.palette.common.white,
   position: 'relative',
   display: 'flex',
-  // flexDirection: 'column',
-  // justifyContent: 'center',
-  // alignItems: 'center',
   height: '100vh',
   width: '100%',
 
@@ -32,7 +29,7 @@ const Hero = () => {
             sx={{
               minHeight: '100%',
               display: 'flex',
-              alignItems: 'top',
+              justifyContent: 'center',
               mt: 2,
               // border: '5px solid green',
             }}
@@ -56,12 +53,12 @@ const Hero = () => {
               sx={{
                 width: '60%',
                 height: 200,
+                padding: 5,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 border: '2px solid #fff',
                 position: 'absolute',
-                // mb: -3,
               }}
             >
               <Typography variant="h1" component="h1" align="center">

@@ -4,17 +4,6 @@ import { createTheme } from '@mui/material'
 import '@fontsource/exo'
 import '@fontsource/orbitron'
 
-// const rawTheme = createTheme({
-//   typography: {
-//     fontFamily: "'Orbitron', 'Exo'",
-//     fontSize: 14,
-//     fontWeightLight: 300,
-//     fontWeightRegular: 400,
-//     fontWeightMedium: 500,
-//     fontWeightBold: 700,
-//   },
-// })
-
 const fontHeader = {
   fontFamily: "'Orbitron', sans-serif",
 }

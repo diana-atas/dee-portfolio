@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 const NavStyles = styled('div')(({ theme }) => ({
   // color: theme.palette.common.white,
-  position: 'relative',
+  position: 'fixed',
   display: 'flex',
   width: '100%',
   justifyContent: 'center',
@@ -14,6 +14,7 @@ const NavStyles = styled('div')(({ theme }) => ({
   zIndex: '99',
   fontFamily: 'Exo',
   textTransform: 'uppercase',
+  // backgroundColor: '#3b1754',
 }))
 
 const Header = () => {
@@ -39,7 +40,10 @@ const Header = () => {
 
   return (
     <NavStyles>
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3}>
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        spacing={{ xs: 0.5, sm: 3 }}
+      >
         <Link href="/">Home</Link>
         <Link href="portfolio">About</Link>
         <Link href="#">Experience</Link>
