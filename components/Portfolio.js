@@ -5,37 +5,60 @@ import Qualification from './Qualification'
 
 import { useRef } from 'react'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
-import { Box } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import { useSpring, animated } from 'react-spring'
 import { styled, ThemeProvider } from '@mui/material/styles'
 
 const PortfolioLayout = styled('div')(({ theme }) => ({
-  // color: theme.palette.common.white,
+  color: theme.palette.common.white,
   position: 'relative',
   height: '100%',
   width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    height: '80vh',
-    minHeight: 500,
-    maxHeight: 1300,
-  },
+  maxWidth: 'xl',
+  // [theme.breakpoints.up('sm')]: {
+  //   height: '80vh',
+  //   minHeight: 500,
+  //   maxHeight: 1300,
+  // },
 }))
 
 const Portfolio = () => {
   // const parallax = useRef<IParallax>(null!)
   const parallax = useRef()
   return (
-    // <PortfolioLayout>
-    <Box sx={{ width: '100%', height: '100%', background: '#253237' }}>
+    <PortfolioLayout>
+      {/* <Box
+        sx={{
+          maxWidth: 'xl',
+          height: '100%',
+          width: '100%',
+          background: '#253237',
+        }}
+      > */}
+      {/* <Grid container> */}
+      <Box
+        sx={{
+          minHeight: '100%',
+          display: 'flex',
+          alignItems: 'top',
+          mt: 2,
+        }}
+      >
+        <Header />
+      </Box>
       <Parallax ref={parallax} pages={3}>
         <ParallaxLayer
+          sticky={{ start: 0, end: 3 }}
           offset={1}
           speed={1}
           style={{
             backgroundImage: 'url(/images/portfolio-bg/pbg1.png)',
             backgroundSize: 'cover',
           }}
-        />
+        >
+          {/* <Grid item xs={12}> */}
+        </ParallaxLayer>
+        {/* </Grid> */}
         <ParallaxLayer
           offset={2}
           speed={1}
@@ -82,12 +105,13 @@ const Portfolio = () => {
           />
         </ParallaxLayer>
       </Parallax>
-      <Header />
+
       <About />
       <Experience />
       <Qualification />
-    </Box>
-    // </PortfolioLayout>
+      {/* </Grid> */}
+      {/* </Box> */}
+    </PortfolioLayout>
   )
 }
 
