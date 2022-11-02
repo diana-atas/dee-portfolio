@@ -26,15 +26,15 @@ export const theme = createTheme({
     },
     h2: {
       fontFamily: fontHeader.fontFamily,
-      fontSize: '3rem',
+      fontSize: '2.6rem',
     },
     h3: {
       fontFamily: fontHeader.fontFamily,
-      fontSize: '2.5rem',
+      fontSize: '2rem',
     },
     h4: {
       fontFamily: fontHeader.fontFamily,
-      fontSize: '2rem',
+      fontSize: '1.5rem',
     },
     h5: {
       fontFamily: fontHeader.fontFamily,
