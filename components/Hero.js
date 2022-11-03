@@ -51,7 +51,7 @@ const Hero = () => {
           >
             <Box
               sx={{
-                width: '60%',
+                width: '50%',
                 height: 200,
                 padding: 5,
                 display: 'flex',
