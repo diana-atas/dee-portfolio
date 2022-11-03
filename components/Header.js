@@ -1,16 +1,15 @@
-import { Box, Stack } from '@mui/material'
+import { AppBar, Box, Toolbar } from '@mui/material'
 import Link from 'next/link'
 import { styled } from '@mui/material/styles'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-const NavStyles = styled('div')(({ theme }) => ({
-  // color: theme.palette.common.white,
-  position: 'fixed',
-  display: 'flex',
-  width: '100%',
-  justifyContent: 'center',
-  textAlign: 'center',
+const NavStyles = styled(AppBar)(({ theme }) => ({
+  color: theme.palette.common.white,
+  // backgroundColor: theme.palette.secondary.dark,
+  background:
+    //   'linear-gradient(90deg, rgba(186,104,200,0.5) 0%, rgba(123,31,162,1) 50%,  rgba(186,104,200,0.5) 100%)',
+    'linear-gradient(90deg, rgba(186,104,200,0.5) 0%, rgba(123,31,162,1) 25%, rgba(123,31,162,1) 75%, rgba(186,104,200,0.5) 100%)',
   zIndex: '99',
   fontFamily: 'Exo',
   textTransform: 'uppercase',
@@ -40,15 +39,23 @@ const Header = () => {
 
   return (
     <NavStyles>
-      <Stack
-        direction={{ xs: 'column', sm: 'row' }}
-        spacing={{ xs: 0.5, sm: 3 }}
+      <Toolbar
+        disableGutters
+        sx={{ justifyContent: 'center', display: 'flex' }}
       >
-        <Link href="/">Home</Link>
-        <Link href="portfolio">About</Link>
-        <Link href="#">Experience</Link>
-        <Link href="#">Qualification</Link>
-      </Stack>
+        <Box sx={{ mx: 1 }}>
+          <Link href="/">Home</Link>
+        </Box>
+        <Box sx={{ mx: 1 }}>
+          <Link href="portfolio">About</Link>
+        </Box>
+        <Box sx={{ mx: 1 }}>
+          <Link href="#">Experience</Link>
+        </Box>
+        <Box sx={{ mx: 1 }}>
+          <Link href="#">Qualification</Link>
+        </Box>
+      </Toolbar>
     </NavStyles>
   )
 }
