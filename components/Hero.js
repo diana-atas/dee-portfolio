@@ -34,8 +34,9 @@ const Hero = () => {
         }}
       >
         <Box
+          width={{ xs: '70%', sm: '40%' }}
           sx={{
-            width: '40%',
+            // width: '40%',
             height: 150,
             padding: 5,
             display: 'flex',
