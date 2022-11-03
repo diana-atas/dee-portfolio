@@ -18,7 +18,7 @@ function MyApp({
         <CssBaseline />
         <Container
           maxWidth="xl"
-          disableGutters="true"
+          disableGutters
           // sx={{ border: '5px solid green' }}
         >
           {/* <Layout> */}
