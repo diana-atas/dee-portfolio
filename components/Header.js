@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Stack } from '@mui/material'
+import { AppBar, Box, Toolbar, Stack, Tooltip } from '@mui/material'
 import Link from 'next/link'
 import { styled } from '@mui/material/styles'
 import { useRouter } from 'next/router'
@@ -6,28 +6,21 @@ import { useEffect } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import {
-  faHouse,
-  faCircleInfo,
-  faRocket,
-} from '@fortawesome/free-solid-svg-icons'
+
+import InfoIcon from '@mui/icons-material/Info'
+import HomeIcon from '@mui/icons-material/Home'
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
 
 const NavStyles = styled(AppBar)(({ theme }) => ({
-  color: theme.palette.common.white,
-  background:
-    'linear-gradient(90deg, rgba(123,31,162,1) 0%, rgba(59,23,84,0.5) 50%, rgba(123,31,162,1) 100%)',
+  // color: theme.palette.common.white,
+  // background:
+  //   'linear-gradient(90deg, rgba(123,31,162,1) 0%, rgba(59,23,84,0.95) 50%, rgba(123,31,162,1) 100%)',
   zIndex: '99',
   fontFamily: 'Exo',
   textTransform: 'uppercase',
-  display: 'flex',
-  justifyContent: 'center',
+  // display: 'flex',
+  // justifyContent: 'center',
 }))
-
-const iconStyle = {
-  // border: '1px solid #fff',
-  // borderRadius: '0.25em',
-  padding: '0.25em',
-}
 
 const Header = () => {
   const router = useRouter()
@@ -55,42 +48,32 @@ const Header = () => {
       <Toolbar disableGutters>
         <Stack direction="row" spacing={1} flexGrow={1} ml={2}>
           <Link href="/">
-            {/* <FontAwesomeIcon icon={faHouse} style={iconStyle} fixedWidth /> */}
-            <FontAwesomeIcon icon={faHouse} size="lg" cursor="pointer" />
+            {/* <FontAwesomeIcon icon={faHouse} size="lg" cursor="pointer" /> */}
+            <Tooltip title="Home">
+              <HomeIcon cursor="pointer" />
+            </Tooltip>
           </Link>
           <Link href="portfolio">
-            <FontAwesomeIcon
-              icon={faCircleInfo}
-              size="lg"
-              cursor="pointer"
-              title="View my CV"
-            />
+            <Tooltip title="View my CV">
+              <InfoIcon cursor="pointer" />
+            </Tooltip>
           </Link>
           <Link href="#">
-            <FontAwesomeIcon
-              icon={faRocket}
-              size="lg"
-              cursor="pointer"
-              title="See what I'm working on"
-            />
+            <Tooltip title="See what I'm working on">
+              <RocketLaunchIcon cursor="pointer" />
+            </Tooltip>
           </Link>
         </Stack>
         <Stack direction="row" spacing={1} justifyContent="flex-end" mr={2}>
           <a href="https://www.linkedin.com/in/diana-atas" target="_blank">
-            {/* <FontAwesomeIcon icon={faLinkedin} fixedWidth /> */}
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              size="xl"
-              title="Connect with me on LinkedIn"
-            />
+            <Tooltip title="Connect with me on LinkedIn">
+              <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            </Tooltip>
           </a>
           <a href="https://github.com/diana-atas" target="_blank">
-            {/* <FontAwesomeIcon icon={faGithub} fixedWidth /> */}
-            <FontAwesomeIcon
-              icon={faGithub}
-              size="xl"
-              title="Follow me on GitHub"
-            />
+            <Tooltip title="Follow me on GitHub">
+              <FontAwesomeIcon icon={faGithub} size="lg" />
+            </Tooltip>
           </a>
         </Stack>
       </Toolbar>
