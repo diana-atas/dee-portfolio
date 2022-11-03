@@ -1,8 +1,11 @@
-import { Box, Typography, Grid } from '@mui/material'
+import { Box, Typography, Grid, Stack } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
 import Header from './Header'
 import Footer from './Footer'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const HeroLayout = styled(Box)(({ theme }) => ({
   color: theme.palette.common.white,
@@ -10,8 +13,6 @@ const HeroLayout = styled(Box)(({ theme }) => ({
   display: 'flex',
   height: '100vh',
   width: '100%',
-
-  // border: '5px solid green',
 
   // [theme.breakpoints.up('sm')]: {
   //   height: '80vh',
@@ -78,6 +79,28 @@ const Hero = () => {
                 full stack developer
               </Typography>
             </Box>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Box
+            sx={{
+              display: 'flex',
+              width: '100%',
+              justifyContent: 'center',
+              mt: 10,
+              position: 'absolute',
+              zIndex: '99',
+            }}
+          >
+            <Stack direction="row" spacing={1}>
+              <a href="https://www.linkedin.com/in/diana-atas" target="_blank">
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              </a>
+              <a href="https://github.com/diana-atas" target="_blank">
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </a>
+            </Stack>
           </Box>
         </Grid>
 
