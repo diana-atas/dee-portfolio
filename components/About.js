@@ -4,28 +4,47 @@ const About = () => {
   return (
     <Container>
       <Box
+        mt={{ xs: 18, sm: 8 }}
+        width={{ xs: '100%', sm: '80%' }}
+        // flexDirection={{ xs: 'column', sm: 'row' }}
         sx={{
-          height: '100vh',
+          height: '100%',
+          position: 'relative',
           display: 'flex',
           flexDirection: 'column',
-          // justifyContent: 'center',
-          padding: 5,
-          // alignItems: 'center',
+          padding: 3,
+          // border: '5px solid blue',
+          alignItems: 'start',
         }}
       >
         <Box
+          mt={{ xs: -4, sm: -4 }}
           sx={{
-            width: 500,
-            // minWidth: 10,
-            mt: 35,
-            ml: 10,
-            position: 'absolute',
             display: 'flex',
-            flexDirection: 'column',
-            border: '2px solid #fff',
+            // height: '100%',
+            backgroundColor: '#fff',
+            color: '#000',
+            position: 'absolute',
+            // alignItems: 'start',
+            mt: -4,
+            ml: 3,
           }}
         >
-          <Box sx={{ padding: 5 }}>
+          <Typography component="h2" variant="h2">
+            about
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            borderTop: '2px solid #fff',
+            borderBottom: '2px solid #fff',
+            padding: 3,
+            mb: 10,
+          }}
+        >
+          <Box sx={{ pb: 3 }}>
             <Typography variant="body1" align="justify">
               After a decade of data processing and number crunching in the
               employee insurance industry using Excel, I sought to expand my
@@ -36,7 +55,7 @@ const About = () => {
               with others.
             </Typography>
           </Box>
-          <Box sx={{ padding: 5 }}>
+          <Box>
             <Typography variant="body1" align="justify">
               When I'm not coding, I have an assortment of activities on
               different days to keep fit: running, road cycling, a bit of yoga
@@ -44,19 +63,6 @@ const About = () => {
               and love to play in the snow whenever we get the chance.
             </Typography>
           </Box>
-        </Box>
-        <Box
-          sx={{
-            backgroundColor: '#fff',
-            color: '#000',
-            position: 'absolute',
-            mt: 30,
-            ml: 12,
-          }}
-        >
-          <Typography component="h2" variant="h2">
-            About
-          </Typography>
         </Box>
       </Box>
     </Container>
