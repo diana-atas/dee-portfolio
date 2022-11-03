@@ -3,10 +3,12 @@ import { styled } from '@mui/material/styles'
 
 const FooterStyles = styled(Box)(({ theme }) => ({
   // color: theme.palette.common.white,
-  position: 'relative',
+  position: 'fixed',
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
   width: '100%',
+  bottom: 0,
 }))
 
 const Footer = () => {
