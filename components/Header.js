@@ -46,33 +46,43 @@ const Header = () => {
   return (
     <NavStyles>
       <Toolbar disableGutters>
-        <Stack direction="row" spacing={1} flexGrow={1} ml={2}>
+        <Stack
+          direction="row"
+          spacing={{ xs: 1.5, sm: 3 }}
+          flexGrow={1}
+          ml={{ xs: 2, sm: 8 }}
+        >
           <Link href="/">
             {/* <FontAwesomeIcon icon={faHouse} size="lg" cursor="pointer" /> */}
             <Tooltip title="Home">
-              <HomeIcon cursor="pointer" />
+              <HomeIcon cursor="pointer" fontSize="large" />
             </Tooltip>
           </Link>
           <Link href="portfolio">
             <Tooltip title="View my CV">
-              <InfoIcon cursor="pointer" />
+              <InfoIcon cursor="pointer" fontSize="large" />
             </Tooltip>
           </Link>
           <Link href="#">
             <Tooltip title="See what I'm working on">
-              <RocketLaunchIcon cursor="pointer" />
+              <RocketLaunchIcon cursor="pointer" fontSize="large" />
             </Tooltip>
           </Link>
         </Stack>
-        <Stack direction="row" spacing={1} justifyContent="flex-end" mr={2}>
+        <Stack
+          direction="row"
+          spacing={{ xs: 1.5, sm: 3 }}
+          justifyContent="flex-end"
+          mr={{ xs: 2, sm: 8 }}
+        >
           <a href="https://www.linkedin.com/in/diana-atas" target="_blank">
             <Tooltip title="Connect with me on LinkedIn">
-              <FontAwesomeIcon icon={faLinkedin} size="lg" />
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </Tooltip>
           </a>
           <a href="https://github.com/diana-atas" target="_blank">
             <Tooltip title="Follow me on GitHub">
-              <FontAwesomeIcon icon={faGithub} size="lg" />
+              <FontAwesomeIcon icon={faGithub} size="2x" />
             </Tooltip>
           </a>
         </Stack>
