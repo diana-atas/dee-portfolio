@@ -27,6 +27,7 @@ const PortfolioLayout = styled('div')(({ theme }) => ({
 const Portfolio = () => {
   return (
     <PortfolioLayout>
+      <Header />
       <Box
         sx={{
           maxWidth: 'xl',
@@ -38,18 +39,6 @@ const Portfolio = () => {
         }}
       >
         <Grid container>
-          <Grid item xs={12}>
-            <Box
-              sx={{
-                minHeight: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                mt: 2,
-              }}
-            >
-              <Header />
-            </Box>
-          </Grid>
           <Grid item xs={12}>
             <About />
           </Grid>

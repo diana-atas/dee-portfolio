@@ -1,12 +1,14 @@
 import {
   Container,
   Box,
+  Paper,
   Typography,
   List,
   ListItem,
   ListItemText,
 } from '@mui/material'
 import { styled } from '@mui/material/styles'
+import { theme } from '../utils/theme'
 
 const Position = styled(Box)(({ theme }) => ({
   border: '1px solid #fff',
@@ -18,6 +20,9 @@ const Position = styled(Box)(({ theme }) => ({
 const Description = styled(List)(({ theme }) => ({
   marginBottom: 10,
 }))
+
+const titleColor = theme.palette.primary.main
+
 const Experience = () => {
   return (
     <Container
@@ -26,11 +31,13 @@ const Experience = () => {
         position: 'relative',
         flexDirection: 'column',
         alignItems: 'end',
+        mt: 10,
       }}
     >
-      <Box
-        width={{ xs: '100%', sm: '80%' }}
+      <Paper
+        elevation={3}
         sx={{
+          width: { xs: '100%', sm: '80%' },
           height: '100%',
           position: 'relative',
           display: 'flex',
@@ -41,25 +48,26 @@ const Experience = () => {
         }}
       >
         <Box
-          sx={{
-            display: 'flex',
-            backgroundColor: '#fff',
-            color: '#000',
-            mr: 3,
-            mt: -4,
-            position: 'absolute',
-          }}
+        // sx={{
+        //   display: 'flex',
+        //   backgroundColor: '#fff',
+        //   color: '#000',
+        //   mr: 3,
+        //   mt: -4,
+        //   position: 'absolute',
+        // }}
         >
-          <Typography component="h2" variant="h2">
+          <Typography component="h2" variant="h2" color={titleColor}>
             experience
           </Typography>
         </Box>
 
         <Box
           sx={{
-            borderTop: '2px solid #fff',
-            borderBottom: '2px solid #fff',
-            padding: 3,
+            borderTop: `2px solid ${titleColor}`,
+            // borderBottom: '2px solid #fff',
+            mt: 1,
+            padding: 2,
           }}
         >
           <Position>
@@ -227,7 +235,7 @@ const Experience = () => {
             </ListItem>
           </Description>
         </Box>
-      </Box>
+      </Paper>
     </Container>
   )
 }
