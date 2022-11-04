@@ -1,54 +1,27 @@
+import { Box, styled, Typography } from '@mui/material'
+import ConstructionIcon from '@mui/icons-material/Construction'
 import Header from './Header'
-import About from './About'
-import Experience from './Experience'
-import Qualification from './Qualification'
 
-import { useRef } from 'react'
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
-import { Box, Grid } from '@mui/material'
-import { useSpring, animated } from 'react-spring'
-import { styled, ThemeProvider } from '@mui/material/styles'
-
-const PortfolioLayout = styled('div')(({ theme }) => ({
+const PortfolioLayout = styled(Box)(({ theme }) => ({
   color: theme.palette.common.white,
   position: 'relative',
   display: 'flex',
-  height: '100%',
+  height: '100vh',
   width: '100%',
-  // border: '5px solid green',
-  // maxWidth: 'xl',
-  // [theme.breakpoints.up('sm')]: {
-  //   height: '80vh',
-  //   minHeight: 500,
-  //   maxHeight: 1300,
-  // },
+  justifyContent: 'center',
+  alignItems: 'center',
+  // border: '2px solid green',
 }))
 
 const Portfolio = () => {
   return (
     <PortfolioLayout>
       <Header />
-      <Box
-        sx={{
-          maxWidth: 'xl',
-          height: '100%',
-          width: '100%',
-          // background: '#253237',
-          backgroundImage: 'url(/images/portfolio-bg/pbg1.png)',
-          backgroundSize: 'cover',
-        }}
-      >
-        <Grid container>
-          <Grid item xs={12}>
-            <About />
-          </Grid>
-          <Grid item xs={12}>
-            <Experience />
-          </Grid>
-          <Grid item xs={12}>
-            <Qualification />
-          </Grid>
-        </Grid>
+      <Box align="center">
+        <ConstructionIcon fontSize="large" />
+        <Typography variant="h4" component="h4">
+          This page is under construction.
+        </Typography>
       </Box>
     </PortfolioLayout>
   )
