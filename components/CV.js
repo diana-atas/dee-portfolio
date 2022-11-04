@@ -9,8 +9,8 @@ import { Box, Grid } from '@mui/material'
 import { useSpring, animated } from 'react-spring'
 import { styled, ThemeProvider } from '@mui/material/styles'
 
-const CVLayout = styled('div')(({ theme }) => ({
-  color: theme.palette.common.white,
+const CVLayout = styled(Box)(({ theme }) => ({
+  // color: theme.palette.common.white,
   position: 'relative',
   display: 'flex',
   height: '100%',
