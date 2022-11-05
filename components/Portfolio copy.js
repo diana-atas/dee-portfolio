@@ -25,6 +25,8 @@ const PortfolioLayout = styled('div')(({ theme }) => ({
 }))
 
 const Portfolio = () => {
+  // const parallax = useRef<IParallax>(null!)
+  const parallax = useRef()
   return (
     <PortfolioLayout>
       <Box
@@ -37,6 +39,58 @@ const Portfolio = () => {
           backgroundSize: 'cover',
         }}
       >
+        <Parallax ref={parallax} pages={3}>
+          <ParallaxLayer
+            offset={1}
+            speed={1}
+            style={{
+              backgroundImage: 'url(/images/portfolio-bg/pbg1o2.png)',
+              backgroundSize: 'cover',
+            }}
+          />
+
+          {/* <ParallaxLayer
+            offset={0}
+            speed={1}
+            style={{
+              backgroundImage: 'url(/images/portfolio-bg/pbg2o2.png)',
+              backgroundSize: 'cover',
+            }}
+          /> */}
+
+          {/* <ParallaxLayer
+            offset={0}
+            speed={0}
+            factor={3}
+            style={{
+              backgroundImage: 'url(/images/portfolio-bg/pbgstars.png)',
+              backgroundSize: 'cover',
+            }}
+          /> */}
+
+          {/* <ParallaxLayer offset={1.3} speed={-0.3} style={{ opacity: 0.1 }}>
+            <Box
+              component="img"
+              alt=""
+              src="/images/portfolio-bg/pbgorangeplanet.png"
+            />
+          </ParallaxLayer> */}
+
+          {/* <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.5 }}>
+            <Box
+              component="img"
+              alt=""
+              src="/images/portfolio-bg/pbgmintplanet.png"
+              style={{ display: 'block' }}
+            />
+            <Box
+              component="img"
+              alt=""
+              src="/images/portfolio-bg/pbgtinymintplanets.png"
+            />
+          </ParallaxLayer> */}
+        </Parallax>
+
         <Grid container>
           <Grid item xs={12}>
             <Box

@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
-import { ThemeProvider } from '@mui/material'
+import { ThemeProvider, CssBaseline, Container } from '@mui/material'
 import { theme } from '../utils/theme'
 import createEmotionCache from '../utils/createEmotionCache'
 import { CacheProvider } from '@emotion/react'
@@ -15,9 +15,16 @@ function MyApp({
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-        <Layout>
+        <CssBaseline />
+        <Container
+          maxWidth="xl"
+          disableGutters
+          // sx={{ border: '5px solid green' }}
+        >
+          {/* <Layout> */}
           <Component {...pageProps} />
-        </Layout>
+          {/* </Layout> */}
+        </Container>
       </ThemeProvider>
     </CacheProvider>
   )
