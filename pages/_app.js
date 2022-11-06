@@ -4,6 +4,10 @@ import { ThemeProvider, CssBaseline, Container } from '@mui/material'
 import { theme } from '../utils/theme'
 import createEmotionCache from '../utils/createEmotionCache'
 import { CacheProvider } from '@emotion/react'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false
 
 const clientSideEmotionCache = createEmotionCache()
 

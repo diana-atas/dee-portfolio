@@ -70,51 +70,51 @@ const CatsInSpace = () => {
     >
       <ScrollingBg
         sx={{
-          background: 'url(/images/hero-bg/bg1.png) repeat-y',
+          background: 'url(/images/hero-bg/bg1.webp) repeat-y',
           animation: `slide 100s linear infinite`,
           zIndex: '-1',
         }}
       />
       <ScrollingBg
         sx={{
-          background: 'url(/images/hero-bg/bg2.png) repeat-y',
+          background: 'url(/images/hero-bg/bg2.webp) repeat-y',
           animation: `slide 70s linear infinite`,
           zIndex: '1',
         }}
       />
       <ScrollingBg
         sx={{
-          background: 'url(/images/hero-bg/bg3.png) repeat-y',
+          background: 'url(/images/hero-bg/bg3.webp) repeat-y',
           animation: `slide 70s linear infinite`,
           zIndex: '2',
         }}
       />
       <ScrollingBg
         sx={{
-          background: 'url(/images/hero-bg/bg4.png) repeat-y',
+          background: 'url(/images/hero-bg/bg4.webp) repeat-y',
           animation: `slide 100s linear infinite`,
           zIndex: '3',
         }}
       />
       <Box sx={{ position: 'absolute', width: '100vh' }}>
         {/* left-facing, floating */}
-        <animated.img src="/images/kitty2.png" style={kitty2} width="5%" />
+        <animated.img src="/images/kitty2.svg" style={kitty2} width="5%" />
       </Box>
       <Box sx={{ position: 'absolute', width: '100vh' }}>
         {/* left-facing */}
-        <animated.img src="/images/kitty4.png" style={kitty4} width="5%" />
+        <animated.img src="/images/kitty4.svg" style={kitty4} width="5%" />
       </Box>
       <Box sx={{ position: 'absolute', width: '100vh' }}>
         {/* front-facing */}
-        <animated.img src="/images/kitty1.png" style={kitty1} width="8%" />
+        <animated.img src="/images/kitty1.svg" style={kitty1} width="8%" />
       </Box>
       <Box sx={{ position: 'absolute', width: '100vh' }}>
         {/* right-facing, belly up */}
-        <animated.img src="/images/kitty3.png" style={kitty3} width="8%" />
+        <animated.img src="/images/kitty3.svg" style={kitty3} width="8%" />
       </Box>
       <Box sx={{ position: 'absolute', width: '100vh' }}>
         {/* kitty holding star */}
-        <animated.img src="/images/kitty5.png" style={kitty5} width="12%" />
+        <animated.img src="/images/kitty5.svg" style={kitty5} width="12%" />
       </Box>
       {/* <FloatingKitty /> */}
     </Box>

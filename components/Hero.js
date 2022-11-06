@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from '@mui/material'
+import { Box, Typography, Grid, Stack } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
 import Header from './Header'
@@ -11,8 +11,6 @@ const HeroLayout = styled(Box)(({ theme }) => ({
   height: '100vh',
   width: '100%',
 
-  // border: '5px solid green',
-
   // [theme.breakpoints.up('sm')]: {
   //   height: '80vh',
   //   minHeight: 500,
@@ -23,77 +21,56 @@ const HeroLayout = styled(Box)(({ theme }) => ({
 const Hero = () => {
   return (
     <HeroLayout>
-      <Grid container sx={{ height: '100vh' }}>
-        <Grid item xs={12}>
-          <Box
-            sx={{
-              minHeight: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              mt: 2,
-              // border: '5px solid green',
-            }}
-          >
-            <Header />
-          </Box>
-        </Grid>
+      <Header />
 
-        <Grid item xs={12}>
-          <Box
-            sx={{
-              minHeight: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              // border: '5px solid green',
-            }}
+      <Box
+        sx={{
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          // border: '5px solid green',
+        }}
+      >
+        <Box
+          width={{ xs: '70%', sm: '40%' }}
+          sx={{
+            // width: '40%',
+            height: 150,
+            padding: 5,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '2px solid #f4d35e',
+            position: 'absolute',
+          }}
+        >
+          <Typography
+            variant="h2"
+            component="h1"
+            align="center"
+            sx={{ color: '#f4d35e' }}
           >
-            <Box
-              sx={{
-                width: '50%',
-                height: 200,
-                padding: 5,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '2px solid #fff',
-                position: 'absolute',
-              }}
-            >
-              <Typography variant="h1" component="h1" align="center">
-                dee atas
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                position: 'absolute',
-                mt: 25,
-                // border: '5px solid blue',
-                color: '#000',
-                backgroundColor: '#fff',
-              }}
-            >
-              <Typography variant="h5" component="h2" align="center">
-                full stack developer
-              </Typography>
-            </Box>
-          </Box>
-        </Grid>
+            dee atas
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            position: 'absolute',
+            mt: 20,
+            // border: '5px solid blue',
+            color: '#3b1754',
+            backgroundColor: '#f4d35e',
+          }}
+        >
+          <Typography variant="h6" component="h2" align="center">
+            full stack developer
+          </Typography>
+        </Box>
+      </Box>
 
-        <Grid item xs={12}>
-          <Box
-            sx={{
-              minHeight: '100%',
-              display: 'flex',
-              alignItems: 'flex-end',
-              // border: '5px solid green',
-            }}
-          >
-            <Footer />
-          </Box>
-        </Grid>
-      </Grid>
+      <Footer />
     </HeroLayout>
   )
 }
