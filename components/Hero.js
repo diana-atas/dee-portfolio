@@ -42,7 +42,8 @@ const Hero = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            border: '2px solid #f4d35e',
+            border: '1px solid #fff',
+            borderRadius: 1,
             position: 'absolute',
           }}
         >
@@ -50,7 +51,7 @@ const Hero = () => {
             variant="h2"
             component="h1"
             align="center"
-            sx={{ color: '#f4d35e' }}
+            // color="#f4d35e"
           >
             dee atas
           </Typography>
@@ -60,8 +61,9 @@ const Hero = () => {
             position: 'absolute',
             mt: 20,
             // border: '5px solid blue',
-            color: '#3b1754',
-            backgroundColor: '#f4d35e',
+            color: '#000',
+            backgroundColor: '#fff',
+            borderRadius: 1,
           }}
         >
           <Typography variant="h6" component="h2" align="center">

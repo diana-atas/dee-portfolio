@@ -1,5 +1,9 @@
-import { Container, Box, Typography } from '@mui/material'
+import { Container, Box, Typography, Paper } from '@mui/material'
 import { styled } from '@mui/material/styles'
+
+import { theme } from '../utils/theme'
+
+const titleColor = theme.palette.primary.main
 
 const QualName = styled(Box)(({ theme }) => ({
   border: '1px solid #fff',
@@ -11,38 +15,27 @@ const QualName = styled(Box)(({ theme }) => ({
 const Qualification = () => {
   return (
     <Container
-    // sx={{
-    //   display: 'flex',
-    //   position: 'relative',
-    //   flexDirection: 'column',
-    //   alignItems: 'end',
-    // }}
+      sx={{
+        display: 'flex',
+        position: 'relative',
+        flexDirection: 'column',
+        my: 10,
+      }}
     >
-      <Box
-        mt={{ xs: 18, sm: 8 }}
-        width={{ xs: '100%', sm: '80%' }}
+      <Paper
+        elevation={3}
         sx={{
-          height: '100%',
+          width: { xs: '100%', sm: '80%' },
           position: 'relative',
           display: 'flex',
           flexDirection: 'column',
           padding: 3,
           alignItems: 'start',
-          // mt: -4,
           // border: '2px solid green',
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            backgroundColor: '#fff',
-            color: '#000',
-            ml: 3,
-            mt: -4,
-            position: 'absolute',
-          }}
-        >
-          <Typography component="h2" variant="h2">
+        <Box>
+          <Typography component="h2" variant="h2" color={titleColor}>
             qualification
           </Typography>
         </Box>
@@ -51,10 +44,9 @@ const Qualification = () => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            borderTop: '2px solid #fff',
-            borderBottom: '2px solid #fff',
-            padding: 3,
-            mb: 10,
+            borderTop: `2px solid ${titleColor}`,
+            padding: 2,
+            mt: 1,
           }}
         >
           <QualName>
@@ -116,7 +108,7 @@ const Qualification = () => {
             </Typography>
           </QualName>
         </Box>
-      </Box>
+      </Paper>
     </Container>
   )
 }

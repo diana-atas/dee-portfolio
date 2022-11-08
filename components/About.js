@@ -1,36 +1,22 @@
-import { Container, Box, Typography } from '@mui/material'
+import { Container, Box, Typography, Paper } from '@mui/material'
+import { theme } from '../utils/theme'
+
+const titleColor = theme.palette.primary.main
 
 const About = () => {
   return (
     <Container>
-      <Box
-        mt={{ xs: 18, sm: 8 }}
-        width={{ xs: '100%', sm: '80%' }}
-        // flexDirection={{ xs: 'column', sm: 'row' }}
+      <Paper
+        elevation={3}
         sx={{
-          height: '100%',
+          width: { xs: '100%', sm: '80%' },
           position: 'relative',
-          display: 'flex',
-          flexDirection: 'column',
-          padding: 3,
-          // border: '5px solid blue',
-          alignItems: 'start',
+          padding: { xs: 1, sm: 3 },
+          mt: 15,
         }}
       >
-        <Box
-          mt={{ xs: -4, sm: -4 }}
-          sx={{
-            display: 'flex',
-            // height: '100%',
-            backgroundColor: '#fff',
-            color: '#000',
-            position: 'absolute',
-            // alignItems: 'start',
-            mt: -4,
-            ml: 3,
-          }}
-        >
-          <Typography component="h2" variant="h2">
+        <Box>
+          <Typography component="h2" variant="h2" color={titleColor}>
             about
           </Typography>
         </Box>
@@ -38,10 +24,11 @@ const About = () => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            borderTop: '2px solid #fff',
-            borderBottom: '2px solid #fff',
-            padding: 3,
-            mb: 10,
+            borderTop: `2px solid ${titleColor}`,
+            // borderBottom: '2px solid #fff',
+            mt: 1,
+            padding: 2,
+            // mb: 10,
           }}
         >
           <Box sx={{ pb: 3 }}>
@@ -64,7 +51,7 @@ const About = () => {
             </Typography>
           </Box>
         </Box>
-      </Box>
+      </Paper>
     </Container>
   )
 }
