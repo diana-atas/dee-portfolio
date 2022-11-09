@@ -1,6 +1,7 @@
 # My Portfolio
 
-This site is live at [https://dee-portfolio.vercel.app/](https://dee-portfolio.vercel.app/)
+This site is live at [https://dee-portfolio.vercel.app/](https://dee-portfolio.vercel.app/).
+
 This portfolio was built with Next.js, Material UI and react-spring.
 
 ## In Progross:
