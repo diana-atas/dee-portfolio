@@ -53,17 +53,16 @@ const Header = () => {
           ml={{ xs: 2, sm: 8 }}
         >
           <Link href="/">
-            {/* <FontAwesomeIcon icon={faHouse} size="lg" cursor="pointer" /> */}
             <Tooltip title="Home">
               <HomeIcon cursor="pointer" fontSize="large" />
             </Tooltip>
           </Link>
-          <Link href="portfolio">
+          <Link href="cv">
             <Tooltip title="View my CV">
               <InfoIcon cursor="pointer" fontSize="large" />
             </Tooltip>
           </Link>
-          <Link href="#">
+          <Link href="portfolio">
             <Tooltip title="See what I'm working on">
               <RocketLaunchIcon cursor="pointer" fontSize="large" />
             </Tooltip>

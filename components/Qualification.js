@@ -29,7 +29,7 @@ const Qualification = () => {
           position: 'relative',
           display: 'flex',
           flexDirection: 'column',
-          padding: 3,
+          padding: { xs: 1, sm: 3 },
           alignItems: 'start',
           // border: '2px solid green',
         }}

@@ -1,9 +1,11 @@
-import Portfolio from '../components/Portfolio'
+import CV from '../components/CV'
+import CatsInSpace from '../components/CatsInSpace'
 
-export default function PortfolioPage() {
+export default function CVPage() {
   return (
     <>
-      <Portfolio />
+      {/* <CatsInSpace /> */}
+      <CV />
     </>
   )
 }
